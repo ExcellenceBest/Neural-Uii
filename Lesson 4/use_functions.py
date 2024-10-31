@@ -34,19 +34,37 @@
 Для реализации основного меню можно использовать пример ниже или написать свой
 """
 
+history_pay = {}
+bank_account = 0.0
 while True:
     print('1. пополнение счета')
     print('2. покупка')
     print('3. история покупок')
     print('4. выход')
 
-    choice = input('Выберите пункт меню')
+    choice = input('Выберите пункт меню ')
     if choice == '1':
-        pass
+        cash = float(input('Введите сумму для пополнения счета: '))
+        bank_account += cash
+        print(f'На вашем счете {bank_account} p.')
+        continue
     elif choice == '2':
-        pass
+        pay = float(input('Введите сумму для покупки: '))
+        if pay > bank_account:
+            print('На счете не достаточно средств!')
+            continue
+        else:
+            bank_account -= pay
+            shop = input('Введите название покупки:  ')
+            history_pay[shop] = pay
+            print(history_pay)
+            continue
     elif choice == '3':
-        pass
+        if len(history_pay) == 0:
+            print('Вы не совершали покупок!')
+        else:
+            for k, v in history_pay.items():
+                print(f'Ваши покупки: {k}, {v}')
     elif choice == '4':
         break
     else:

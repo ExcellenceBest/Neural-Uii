@@ -24,6 +24,13 @@
 #
 # Дополнительная информация (База знаний УИИ - «Метод numpy.full()»)
 # """
+import numpy as np
+arr = np.random.randint(15, 38, (3, 4))
+arr2 = np.where((arr < 20), 'small', arr)
+arr3 = np.where((arr > 20) & (arr < 30), 'medium', arr2)
+answer = np.where((arr > 30), 'large', arr3)
+print(answer)
+
 # import numpy as np
 # # arr = np.random.randint(15, 38, (3, 4))
 # # print(arr)
@@ -49,7 +56,14 @@
 # # a = test()
 # # arr2 = np.array(a)
 # # print(arr2)
-#
+
+import numpy as np
+arr = np.random.randint(15, 38, (3, 4))
+arr2 = np.where((arr < 20), 'small', arr)
+arr3 = np.where((arr > 20) & (arr < 30), 'medium', arr2)
+answer = np.where((arr > 30), 'large', arr3)
+print(answer)
+
 # """
 # Задание 2
 # С помощью встроенных методов библиотеки numpy найдите дату первого понедельника в 2015 году."""

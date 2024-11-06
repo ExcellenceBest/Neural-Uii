@@ -24,12 +24,13 @@
 #
 # Дополнительная информация (База знаний УИИ - «Метод numpy.full()»)
 # """
-import numpy as np
-arr = np.random.randint(15, 38, (3, 4))
-arr2 = np.where((arr < 20), 'small', arr)
-arr3 = np.where((arr > 20) & (arr < 30), 'medium', arr2)
-answer = np.where((arr > 30), 'large', arr3)
-print(answer)
+# import numpy as np
+# arr = np.random.randint(15, 38, (3, 4))
+# arr2 = np.where((arr < 20), 'small', arr)
+# arr3 = np.where((arr > 20) & (arr < 30), 'medium', arr2)
+# answer = np.where((arr > 30), 'large', arr3)
+# print(answer)
+import random
 
 # import numpy as np
 # # arr = np.random.randint(15, 38, (3, 4))
@@ -57,17 +58,28 @@ print(answer)
 # # arr2 = np.array(a)
 # # print(arr2)
 
-import numpy as np
-arr = np.random.randint(15, 38, (3, 4))
-arr2 = np.where((arr < 20), 'small', arr)
-arr3 = np.where((arr > 20) & (arr < 30), 'medium', arr2)
-answer = np.where((arr > 30), 'large', arr3)
-print(answer)
 
-# """
 # Задание 2
 # С помощью встроенных методов библиотеки numpy найдите дату первого понедельника в 2015 году."""
 #
 # start_date = '2015-01-01'
 # answer = np.busday_offset(start_date, 2, roll="modifiedfollowing")
 # print(f'Первый понедельник в 2015 году: {answer}')
+
+import matplotlib.pyplot as plt
+import numpy as np
+# import seaborn as sns
+# sns.set_style('darkgrid')
+
+x = np.random.randint(1, 15, 3)
+y = np.random.randint(1, 15, 3)
+print(x)
+print(y)
+plt.scatter(x, y)
+
+# plt.plot(x, y)
+# plt.title('Наш первый график', fontsize=14, color='m')
+# plt.ylabel('Y ось', fontsize=10, color='orange')
+# plt.xlabel('X ось', fontsize=12, color='g')
+plt.show()
+

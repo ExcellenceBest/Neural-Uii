@@ -68,8 +68,10 @@ import random
 
 import matplotlib.pyplot as plt
 import numpy as np
+import sns
+
 # import seaborn as sns
-# sns.set_style('darkgrid')
+sns.set_style('darkgrid')
 
 x = ['1', '2', '3', '4']
 y = [23, 34, 34, 45]

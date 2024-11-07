@@ -71,12 +71,12 @@ import numpy as np
 # import seaborn as sns
 # sns.set_style('darkgrid')
 
-x = np.random.randint(1, 15, 3)
-y = np.random.randint(1, 15, 3)
+x = ['1', '2', '3', '4']
+y = [23, 34, 34, 45]
 print(x)
 print(y)
-plt.scatter(x, y)
 
+plt.pie(y, labels=x)
 # plt.plot(x, y)
 # plt.title('Наш первый график', fontsize=14, color='m')
 # plt.ylabel('Y ось', fontsize=10, color='orange')

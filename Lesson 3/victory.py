@@ -24,7 +24,7 @@ start = True
 while start:
     right, wrong = 0, 0
     for i in result:
-        x = input(f'Введите год рождения {i[0]}:  ')  # Запрашиваем дату
+        x = input(f'Введите дату рождения {i[0]}:  ')  # Запрашиваем дату
         if x == i[1]:
            print('Ваш ответ верный!!!')
            right += 1

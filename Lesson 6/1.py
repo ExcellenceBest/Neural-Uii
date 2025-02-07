@@ -30,8 +30,8 @@
 # arr3 = np.where((arr > 20) & (arr < 30), 'medium', arr2)
 # answer = np.where((arr > 30), 'large', arr3)
 # print(answer)
-import random
 
+# import random
 # import numpy as np
 # # arr = np.random.randint(15, 38, (3, 4))
 # # print(arr)
@@ -62,24 +62,63 @@ import random
 # Задание 2
 # С помощью встроенных методов библиотеки numpy найдите дату первого понедельника в 2015 году."""
 #
-# start_date = '2015-01-01'
-# answer = np.busday_offset(start_date, 2, roll="modifiedfollowing")
-# print(f'Первый понедельник в 2015 году: {answer}')
+start_date = '2015-01-01'
+answer = np.busday_offset(start_date, 2, roll="modifiedfollowing")
+print(f'Первый понедельник в 2015 году: {answer}')
 
+# """Задание 3.
+# Пузырьковая сортировка.
+# """
+# import random
+#
+# data = [random.randint(1, 100) for i in range(30)]
+# k = 0
+# v = 1
+# while k != len(data):
+#     if v == len(data):
+#         k += 1
+#         v = k + 1
+#     elif data[k] > data[v]:
+#         data[k], data[v] = data[v], data[k]
+#         v += 1
+#     else:
+#         v += 1
+# print(data)
+
+# """Задание 4."""
+#
+# import matplotlib.pyplot as plt
+# import random
+#
+#
+# x = [random.randint(1, 100) for i in range(200)]
+# y = [random.randint(1, 100) for a in range(200)]
+# plt.scatter(x, y)
+# plt.title('График рассеяния', fontsize=20, color='blue')
+# plt.ylabel('Y ось', fontsize=15, color='red')
+# plt.xlabel('X ось', fontsize=15, color='black')
+# plt.show()
+#
+# """Задание 5."""
 import matplotlib.pyplot as plt
-import numpy as np
+
+# x = [-7, -5, 7, 9, 10, 10, 9, -7, 0, 5, 7, 4, 0, 6, 8, 4, 0]
+# y = [0, 2, 2, 5, 5, 1, 0, 0, 2, 6, 6, 2, 1, -3, -3, 1, 1]
+# plt.scatter(x, y)
+# plt.show()
+
+# x = [-7, -5, 7, 9, 10, 10, 9, -7, 0, 5, 7, 4, 0, 6, 8, 4, 0]
+# y = [0, 2, 2, 5, 5, 1, 0, 0, 2, 6, 6, 2, 1, -3, -3, 1, 1]
+# plt.plot(x, y, 6, 3)
+# plt.show()
+
 # import seaborn as sns
-# sns.set_style('darkgrid')
-
-x = ['1', '2', '3', '4']
-y = [23, 34, 34, 45]
-print(x)
-print(y)
-
-plt.pie(y, labels=x)
+# sns.set_style('white')
+# x = [-7, -5, 7, 9, 10, 10, 9, -7, 0, 5, 7, 4, 0, 6, 8, 4, 0]
+# y = [0, 2, 2, 5, 5, 1, 0, 0, 2, 6, 6, 2, 1, -3, -3, 1, 1]
+# plt.figure(figsize=(6, 3))
+# plt.title('Самолет', fontsize=18, color='red')
+# plt.ylabel('Y', fontsize=12, color='blue')
+# plt.xlabel('X', fontsize=12, color='blue')
 # plt.plot(x, y)
-# plt.title('Наш первый график', fontsize=14, color='m')
-# plt.ylabel('Y ось', fontsize=10, color='orange')
-# plt.xlabel('X ось', fontsize=12, color='g')
-plt.show()
-
+# plt.show()

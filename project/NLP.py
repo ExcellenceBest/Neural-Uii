@@ -41,7 +41,7 @@ def get_text(path: str) -> dict:
         # for _ in range(ind[k], len(string1)):
         #     if _.isdigit():
         #         k.append(int(_))
-
+h
 
 
 

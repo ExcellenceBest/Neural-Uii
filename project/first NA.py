@@ -1,6 +1,6 @@
 # # !pip -q install easyocr
 #
-# import easyocr
+import easyocr
 # import shutil
 # import os
 # import random
@@ -10,3 +10,7 @@
 # import matplotlib.pyplot as plt
 # import numpy as np
 
+reader = easyocr.Reader(['ru'],
+                        model_storage_directory='custom_EasyOCR/model',
+                        user_network_directory='custom_EasyOCR/user_network',
+                        recog_network='custom_example')

@@ -6,8 +6,8 @@ def is_number(s):
         return False
 
 def get_text(path: str) -> dict:
-    base = {'глюкоза': r'глюко', 'креатинин': r'креати', 'мочевина': r'мочеви',
-            'альбумин': r'альбум', 'глобулин': r'глобул'}
+    base = {'глюкоза': 'глюко', 'креатинин': 'креати', 'мочевина': 'мочеви',
+            'альбумин': 'альбум', 'глобулин': 'глобул', 'AST': 'азт', 'ALT': 'ац'}
     dct = {}
     with open(path, 'r', encoding='utf-8') as file:
         data = [i.strip() for i in file.readlines()]
@@ -34,6 +34,6 @@ def get_text(path: str) -> dict:
                     continue
         return dct
 
-path = 'txt2.txt'
+path = 'text.txt'
 answer = get_text(path)
 print(answer)

@@ -23,3 +23,9 @@ def get_text(path: str) -> dict:
 path = 'text.txt'
 data = get_text(path)
 print(data)
+
+
+# from keras.models import load_model
+# model.save('model.h5')
+# # Загрузка обученной модели
+# loaded_model = load_model('model.h5')
